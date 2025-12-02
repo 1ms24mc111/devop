@@ -8,6 +8,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main', url:'https://github.com/1ms24mc111/devop.git'
+                echo "From git pipeline started"
             }
         }
         stage('Build') {
