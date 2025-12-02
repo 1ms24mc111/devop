@@ -9,11 +9,10 @@ pipeline {
             steps {
                 git branch: 'main', url:'https://github.com/1ms24mc111/devop.git'
                 echo "From git pipeline started"
+                echo "From git pipeline completed"
             }
         }
-        stage('pipeline'){
-            echo "From git pipeline completed"
-        }
+        
         stage('Build') {
             steps {
                 sh 'javac hello.java'
