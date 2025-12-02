@@ -11,6 +11,9 @@ pipeline {
                 echo "From git pipeline started"
             }
         }
+        stage('pipeline'){
+            echo "From git pipeline completed"
+        }
         stage('Build') {
             steps {
                 sh 'javac hello.java'
